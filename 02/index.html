@@ -14,17 +14,18 @@
 
         .container{
             display: grid;
-            width: 80vw;
+            width: 100%;
             margin: auto;
             grid-template-columns: 35vw 35vw;
             grid-template-rows: 45vh 45vh;
-            grid-gap: 25px;
+            grid-gap: 15px;
             grid-template-areas: 
             "top top"
             "bottomLeft bottomRight";
             border: 2px solid rgb(247, 182, 96);
+            
             /*Big riveal!*/
-            /* justify-content: center; */
+            justify-content: center;
         }
 
         .box {
@@ -32,7 +33,9 @@
             align-items: center;
             justify-content: center;
             border: 1px solid red;
-            padding: 15px;
+            /* padding: 15px; */
+            /* width: 250px; */
+            /* height: 150px; */
         }
 
         #one{
@@ -54,6 +57,11 @@
         <div class="box" id="one"> Box 1</div>
         <div class="box" id="two"> Box 2 </div>
         <div class="box" id="three"> Box 3 </div>
+        <!-- <div class="box"> Space 1</div> -->
+        <!-- <div class="box"> Space 2</div> -->
+        <!-- <div class="box"> Space 3</div> -->
+        <!-- <div class="box"> Space 4</div> -->
+        <!-- <div class="box"> Space 5</div> -->
     </div>
 </body>
 </html>
