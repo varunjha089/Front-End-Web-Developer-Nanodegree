@@ -1,67 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlexBox and Grid</title>
-    <style>
-        body{
-            background-color: #444;
-            color: white;
-            font-size: 27px;
-        }
+    <head>
+        <meta charset="utf-8" />
+        <title>Exercise 1</title>
+        <meta
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+        name="viewport"
+        />
 
-        .container{
-            display: grid;
-            width: 100%;
-            margin: auto;
-            grid-template-columns: 35vw 35vw;
-            grid-template-rows: 45vh 45vh;
-            grid-gap: 15px;
-            grid-template-areas: 
-            "top top"
-            "bottomLeft bottomRight";
-            border: 2px solid rgb(247, 182, 96);
+        <style>
+            .container{
+                /* Step 1: Set display to grid */
+                display:grid;
+                /* Step 2: setup rows amd columns */
+                /* grid-template-columns: repeat(3, 1fr); */
+                grid-template-columns: 300px 300px 300px;
+                grid-template-rows: 250px 600px;
+                grid-template-areas: 
+                "hd hd hd hd hd hd hd hd"
+                "sd sd sd main main main main main"
+                "ft ft ft ft ft ft ft ft";
+                border: 2px solid yellow;
+            }
             
-            /*Big riveal!*/
-            justify-content: center;
-        }
+            .box{
+                border: 1px solid red;
+                background: #F8FA9D;
+                }
 
-        .box {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid red;
-            /* padding: 15px; */
-            /* width: 250px; */
-            /* height: 150px; */
-        }
+            /* Assign grid area below */
+            .header{
+                grid-area: hd;
+            }
 
-        #one{
-            grid-area: top;
-        }
+            .footer{
+                grid-area: ft;
+            }
 
-        #two{
-            grid-area: bottomLeft;
-        }
+            .sidebar{
+                grid-area: sd;
+            }
+            
+            .content{
+                grid-area: main;
+            }
+        </style>
+    </head>
 
-        #three{
-            grid-area: bottomRight;
-        }
-
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="box" id="one"> Box 1</div>
-        <div class="box" id="two"> Box 2 </div>
-        <div class="box" id="three"> Box 3 </div>
-        <!-- <div class="box"> Space 1</div> -->
-        <!-- <div class="box"> Space 2</div> -->
-        <!-- <div class="box"> Space 3</div> -->
-        <!-- <div class="box"> Space 4</div> -->
-        <!-- <div class="box"> Space 5</div> -->
-    </div>
-</body>
+    <body>
+        <div class = "container">
+            <div class="header box">Header</div>
+            <div class="sidebar box">Sidebar</div>
+            <div class="content box">Content</div>
+            <div class="footer box">Footer</div>
+        </div>
+    </body>
 </html>
